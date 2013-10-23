@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Collabco Wiki Feature feature.
+ */
+
+include_once 'off_wiki_feature.features.inc';
