@@ -22,6 +22,13 @@ function off_wiki_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'book_block_mode';
+  $strongarm->value = 'all pages';
+  $export['book_block_mode'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'book_child_type';
   $strongarm->value = 'book';
   $export['book_child_type'] = $strongarm;
@@ -46,7 +53,6 @@ function off_wiki_feature_strongarm() {
   $strongarm->name = 'book_helper_links';
   $strongarm->value = array(
     0 => 'book_add_child',
-    1 => 'book_printer',
   );
   $export['book_helper_links'] = $strongarm;
 
@@ -80,7 +86,7 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'book_helper_remove_book_navigation';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['book_helper_remove_book_navigation'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -180,6 +186,113 @@ function off_wiki_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_cache';
+  $strongarm->value = 0;
+  $export['freelinking_cache'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_createnode_failover';
+  $strongarm->value = 'none';
+  $export['freelinking_createnode_failover'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_default';
+  $strongarm->value = 'nodetitle';
+  $export['freelinking_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_drupalorgnid_http_request';
+  $strongarm->value = 1;
+  $export['freelinking_drupalorgnid_http_request'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_file_file_path';
+  $strongarm->value = 'public://';
+  $export['freelinking_file_file_path'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_match_syntax';
+  $strongarm->value = 'double_bracket';
+  $export['freelinking_match_syntax'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_nodetitle_failover';
+  $strongarm->value = 'none';
+  $export['freelinking_nodetitle_failover'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_nodetitle_searchcontenttype';
+  $strongarm->value = 'none';
+  $export['freelinking_nodetitle_searchcontenttype'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_path_basepath';
+  $strongarm->value = '';
+  $export['freelinking_path_basepath'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_path_failover';
+  $strongarm->value = 'none';
+  $export['freelinking_path_failover'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_prepopulate_node_advanced';
+  $strongarm->value = array(
+    0 => 0,
+  );
+  $export['freelinking_prepopulate_node_advanced'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_prepopulate_node_type';
+  $strongarm->value = 'basic_page';
+  $export['freelinking_prepopulate_node_type'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_search_failover';
+  $strongarm->value = 'error';
+  $export['freelinking_search_failover'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_showtext_failover';
+  $strongarm->value = 'error';
+  $export['freelinking_showtext_failover'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'freelinking_wikipedia_languagecode';
+  $strongarm->value = 'en';
+  $export['freelinking_wikipedia_languagecode'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_book';
   $strongarm->value = array(
     0 => 'main-menu',
@@ -215,6 +328,13 @@ function off_wiki_feature_strongarm() {
   $strongarm->name = 'node_submitted_book';
   $strongarm->value = 0;
   $export['node_submitted_book'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_book_pattern';
+  $strongarm->value = 'wiki/[node:book:root:title]/[node:title]';
+  $export['pathauto_node_book_pattern'] = $strongarm;
 
   return $export;
 }
