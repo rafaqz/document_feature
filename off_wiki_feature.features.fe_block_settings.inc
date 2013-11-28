@@ -41,5 +41,32 @@ node/*/edit',
     'visibility' => 0,
   );
 
+  $export['views-wiki_list-group_block'] = array(
+    'cache' => -1,
+    'css_class' => 'sidetheme',
+    'custom' => 0,
+    'delta' => 'wiki_list-group_block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'custom_theme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'custom_theme',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }
