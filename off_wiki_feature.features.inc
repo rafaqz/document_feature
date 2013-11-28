@@ -31,9 +31,9 @@ function off_wiki_feature_views_api() {
 function off_wiki_feature_node_info() {
   $items = array(
     'book' => array(
-      'name' => t('Book page'),
+      'name' => t('Wiki page'),
       'base' => 'node_content',
-      'description' => t('<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'),
+      'description' => t('<em>Wikis (Books)</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
