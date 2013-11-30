@@ -15,7 +15,7 @@ function off_wiki_feature_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'group_wiki';
   $context->description = 'Show wiki block(s) on groups/group content.';
-  $context->tag = '';
+  $context->tag = 'wiki feature';
   $context->conditions = array(
     'context_og_condition_group_type' => array(
       'values' => array(
@@ -43,6 +43,7 @@ function off_wiki_feature_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Show wiki block(s) on groups/group content.');
+  t('wiki feature');
   $export['group_wiki'] = $context;
 
   return $export;

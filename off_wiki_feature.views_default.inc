@@ -13,7 +13,7 @@ function off_wiki_feature_views_default_views() {
   $view = new view();
   $view->name = 'wiki_list';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'Wiki Feature';
   $view->base_table = 'node';
   $view->human_name = 'Wiki List';
   $view->core = 7;
