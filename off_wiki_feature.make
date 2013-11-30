@@ -12,4 +12,5 @@ projects[book_explorer][subdir] = "contrib"
 projects[freelinking][version] = "3.2"
 projects[freelinking][subdir] = "contrib"
 
-, 
+projects[prepopulate][version] = "2.x-dev"
+projects[prepopulate][subdir] = "contrib"
