@@ -72,7 +72,6 @@ function off_wiki_feature_og_features_default_permissions() {
   $permissions['node:project:delete any book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
-      'member' => 'member',
     ),
   );
 
@@ -88,7 +87,6 @@ function off_wiki_feature_og_features_default_permissions() {
   $permissions['node:project:update any book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
-      'member' => 'member',
     ),
   );
 

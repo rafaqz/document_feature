@@ -42,6 +42,9 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'create book content',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -60,6 +63,8 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'delete any book content',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'node',
   );
@@ -69,6 +74,9 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'delete own book content',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -78,6 +86,8 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'edit any book content',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'node',
   );
@@ -87,6 +97,9 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'edit own book content',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
