@@ -16,6 +16,7 @@ dependencies[] = freelinking_prepopulate
 dependencies[] = node
 dependencies[] = off_categories_feature
 dependencies[] = og
+dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text

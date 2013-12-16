@@ -109,6 +109,11 @@ function off_wiki_feature_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_category',
     'label' => 'Category',
+    'options_limit' => 0,
+    'options_limit_empty_behaviour' => 0,
+    'options_limit_fields' => array(
+      'og_group_ref' => 0,
+    ),
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -118,13 +123,13 @@ function off_wiki_feature_field_default_field_instances() {
       'display_name' => 'term_reference_1',
       'match_operator' => 'CONTAINS',
       'size' => '',
-      'view_name' => 'group_categories',
+      'view_name' => 'category_term_reference_filter',
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'hs_taxonomy',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'taxonomy_hs',
+      'type' => 'options_select',
       'weight' => 34,
     ),
   );
