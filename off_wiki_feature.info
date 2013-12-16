@@ -13,7 +13,6 @@ dependencies[] = features
 dependencies[] = filter
 dependencies[] = freelinking
 dependencies[] = freelinking_prepopulate
-dependencies[] = hs_taxonomy
 dependencies[] = node
 dependencies[] = off_categories_feature
 dependencies[] = og
