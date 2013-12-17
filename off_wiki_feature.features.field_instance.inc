@@ -123,7 +123,7 @@ function off_wiki_feature_field_default_field_instances() {
       'display_name' => 'term_reference_1',
       'match_operator' => 'CONTAINS',
       'size' => '',
-      'view_name' => 'category_term_reference_filter',
+      'view_name' => 'group_term_reference_filter',
     ),
     'widget' => array(
       'active' => 1,
