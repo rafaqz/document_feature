@@ -101,4 +101,5 @@ features[variable][] = node_preview_book
 features[variable][] = node_submitted_book
 features[variable][] = pathauto_node_book_pattern
 features[views_view][] = wiki_list
+features[views_view][] = wikis
 project path = sites/all/modules/features
