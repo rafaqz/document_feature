@@ -5,3 +5,21 @@
  */
 
 include_once 'off_wiki_feature.features.inc';
+
+/**
+ * Implements hook_node_view().
+ *
+ * Add og_group_ref prepopulate query to 'Add child page' link, so it uses the 
+ * parents group by default.
+ */
+function off_wiki_feature_node_view_alter(&$build) {
+  // If this node is connected to a group.
+  if (!empty($build['#node']->og_group_ref['und'][0]['target_id'])) {
+    // And this is a normal book page.
+    if (!empty($build['#node']->book['bid']) && empty($build['#node']->in_preview)) {
+      // Put the group idea in the url query for entityreference prepopulate.
+      $gid =  $build['#node']->og_group_ref['und'][0]['target_id'];
+      $build['links']['book']['#links']['book_add_child']['query']['og_group_ref'] = $gid;
+    }
+  }
+}
