@@ -37,6 +37,15 @@ function off_wiki_feature_user_default_permissions() {
     'module' => 'book',
   );
 
+  // Exported permission: administer freelinking.
+  $permissions['administer freelinking'] = array(
+    'name' => 'administer freelinking',
+    'roles' => array(
+      'Admin' => 'Admin',
+    ),
+    'module' => 'freelinking',
+  );
+
   // Exported permission: create book content.
   $permissions['create book content'] = array(
     'name' => 'create book content',
@@ -102,6 +111,18 @@ function off_wiki_feature_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: use text format wiki.
+  $permissions['use text format wiki'] = array(
+    'name' => 'use text format wiki',
+    'roles' => array(
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
   );
 
   return $permissions;
