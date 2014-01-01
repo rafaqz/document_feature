@@ -107,6 +107,15 @@ function off_wiki_feature_views_default_views() {
   );
   $handler->display->display_options['style_options']['class'] = 'unstyled';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Link */
+  $handler->display->display_options['header']['link']['id'] = 'link';
+  $handler->display->display_options['header']['link']['table'] = 'views';
+  $handler->display->display_options['header']['link']['field'] = 'link';
+  $handler->display->display_options['header']['link']['label'] = 'Create Wiki Link';
+  $handler->display->display_options['header']['link']['empty'] = TRUE;
+  $handler->display->display_options['header']['link']['text'] = 'Create Wiki';
+  $handler->display->display_options['header']['link']['path'] = 'node/add/book';
+  $handler->display->display_options['header']['link']['querystring'] = 'og_group_ref=!1';
   /* Relationship: OG membership: OG membership from Node */
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
@@ -130,7 +139,7 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['fields']['title_1']['label'] = '';
   $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  /* Field: Content: Body */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -177,8 +186,8 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['filters']['depth']['value']['max'] = '2';
   $handler->display->display_options['filters']['depth']['value']['value'] = '1';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Group Page */
+  $handler = $view->new_display('page', 'Group Page', 'group_page');
   $handler->display->display_options['path'] = 'node/%/wiki';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Wiki';
