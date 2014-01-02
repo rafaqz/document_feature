@@ -23,3 +23,26 @@ function off_wiki_feature_node_view_alter(&$build) {
     }
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Adapted from module new_book_by_default
+ */
+function off_wiki_feature_form_node_form_alter(&$form, &$form_state, $form_id) {
+  // Node is new.
+  if (!isset($form['#node']->nid)
+      // Content type has/allows a book outline.
+      && isset($form['book'])
+      // Default is currently <none>.
+      && $form['book']['bid']['#default_value'] === 0
+      // The <create a new book> option is available.
+      && isset($form['book']['bid']['#options']['new'])) {
+
+    // Get options for all content types.
+    $content_types_options = variable_get('new_book_by_default_node_types', array('book'));
+
+    // Set default book option to <create a new book>.
+    $form['book']['bid']['#default_value'] = 'new';
+  }
+}
