@@ -98,32 +98,12 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'list';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'title_1',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['style_options']['class'] = 'unstyled';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Link */
-  $handler->display->display_options['header']['link']['id'] = 'link';
-  $handler->display->display_options['header']['link']['table'] = 'views';
-  $handler->display->display_options['header']['link']['field'] = 'link';
-  $handler->display->display_options['header']['link']['label'] = 'Create Wiki Link';
-  $handler->display->display_options['header']['link']['empty'] = TRUE;
-  $handler->display->display_options['header']['link']['text'] = 'Create Wiki';
-  $handler->display->display_options['header']['link']['path'] = 'node/add/book';
-  $handler->display->display_options['header']['link']['querystring'] = 'og_group_ref=!1';
   /* Relationship: OG membership: OG membership from Node */
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
-  /* Relationship: Book: Top level book */
-  $handler->display->display_options['relationships']['bid']['id'] = 'bid';
-  $handler->display->display_options['relationships']['bid']['table'] = 'book';
-  $handler->display->display_options['relationships']['bid']['field'] = 'bid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -131,26 +111,23 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['relationship'] = 'bid';
-  $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
   /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
   $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  /* Sort criterion: Book: Hierarchy */
-  $handler->display->display_options['sorts']['p']['id'] = 'p';
-  $handler->display->display_options['sorts']['p']['table'] = 'book_menu_links';
-  $handler->display->display_options['sorts']['p']['field'] = 'p';
-  $handler->display->display_options['sorts']['p']['sort_within_level'] = 0;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Contextual filter: OG membership: Group ID */
   $handler->display->display_options['arguments']['gid']['id'] = 'gid';
   $handler->display->display_options['arguments']['gid']['table'] = 'og_membership';
@@ -177,14 +154,6 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'book' => 'book',
   );
-  /* Filter criterion: Book: Depth */
-  $handler->display->display_options['filters']['depth']['id'] = 'depth';
-  $handler->display->display_options['filters']['depth']['table'] = 'book_menu_links';
-  $handler->display->display_options['filters']['depth']['field'] = 'depth';
-  $handler->display->display_options['filters']['depth']['operator'] = 'between';
-  $handler->display->display_options['filters']['depth']['value']['min'] = '1';
-  $handler->display->display_options['filters']['depth']['value']['max'] = '2';
-  $handler->display->display_options['filters']['depth']['value']['value'] = '1';
 
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
