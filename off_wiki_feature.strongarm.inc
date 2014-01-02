@@ -44,7 +44,9 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'book_helper_create_new';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'book',
+  );
   $export['book_helper_create_new'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -67,12 +69,7 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'book_helper_navigation_options';
-  $strongarm->value = array(
-    0 => 'tree',
-    1 => 'prev',
-    2 => 'next',
-    3 => 'up',
-  );
+  $strongarm->value = array();
   $export['book_helper_navigation_options'] = $strongarm;
 
   $strongarm = new stdClass();
