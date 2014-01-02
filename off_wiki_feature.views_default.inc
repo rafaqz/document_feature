@@ -104,6 +104,10 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  /* Relationship: Book: Top level book */
+  $handler->display->display_options['relationships']['bid']['id'] = 'bid';
+  $handler->display->display_options['relationships']['bid']['table'] = 'book';
+  $handler->display->display_options['relationships']['bid']['field'] = 'bid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -154,6 +158,11 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'book' => 'book',
   );
+  /* Filter criterion: Book: Depth */
+  $handler->display->display_options['filters']['depth']['id'] = 'depth';
+  $handler->display->display_options['filters']['depth']['table'] = 'book_menu_links';
+  $handler->display->display_options['filters']['depth']['field'] = 'depth';
+  $handler->display->display_options['filters']['depth']['value']['value'] = '1';
 
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
