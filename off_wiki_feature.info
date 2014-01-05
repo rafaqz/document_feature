@@ -99,5 +99,6 @@ features[variable][] = node_submitted_book
 features[variable][] = pathauto_node_book_pattern
 features[views_view][] = wiki_list
 features[views_view][] = wikis
+features_exclude[dependencies][collabco_settings_feature] = collabco_settings_feature
 features_exclude[field_base][og_group_ref] = og_group_ref
 project path = sites/all/modules/features
