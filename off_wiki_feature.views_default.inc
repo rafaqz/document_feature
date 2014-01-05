@@ -108,26 +108,16 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['relationships']['bid']['id'] = 'bid';
   $handler->display->display_options['relationships']['bid']['table'] = 'book';
   $handler->display->display_options['relationships']['bid']['field'] = 'bid';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '400';
-  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
-  );
+  /* Field: Content: Rendered Node */
+  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['label'] = '';
+  $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
