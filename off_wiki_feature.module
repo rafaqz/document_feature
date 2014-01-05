@@ -25,11 +25,26 @@ function off_wiki_feature_node_view_alter(&$build) {
 }
 
 /**
- * Implements hook_views_pre_view().
+ * Implements hook_collabco_integration().
  */
-function off_wiki_feature_views_pre_view($view, $display_id, $args) {
-  if ($view->name == 'wikis' && $display_id == 'group_page') {
-    collabco_groups_feature_view_content_link($view, 'book', 'header');
-  }
+function off_wiki_feature_collabco_integration() {
+  // Add links to views if a module wants to do that.
+  return array(
+    'off_wiki_feature' => array(
+      'views' => array(
+        'wikis' => array(
+          'group_page' => array(
+            'subscribe_flag' => array(
+              'group_type' => 'node',
+              'entity_type' => 'none',
+            ),
+            'add_content_link' => array(
+              'bundle' => 'book',
+              'areas' => array('header'),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
-
