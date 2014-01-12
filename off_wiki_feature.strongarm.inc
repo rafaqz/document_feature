@@ -313,6 +313,13 @@ function off_wiki_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'message_subscribe_wiki';
+  $strongarm->value = 'subscribe_wiki:default';
+  $export['message_subscribe_wiki'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_book';
   $strongarm->value = array(
     0 => 'status',
