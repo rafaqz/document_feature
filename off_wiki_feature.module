@@ -97,11 +97,16 @@ function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $s
     $nodes = entity_load('node', $entity_ids);
     book_node_load($nodes,'book');
     foreach ($nodes as $node) { 
-      if (!empty($node->book)) {
-        $book_parent_ids[$node->book['bid']] = $node->book['bid'];
+      if (empty($node->book)) {
+        continue; 
       }
+      $book_parent_ids[$node->book['bid']] = $node->book['bid'];
     }
         
+    if (empty($book_parent_ids)) {
+      continue;
+    }
+    
     // Get the idea of the wiki subsribe flag.
     $flag_name = 'subscribe_wiki';
     $flag = flag_load($flag_name);
