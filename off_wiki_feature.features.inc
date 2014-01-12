@@ -25,10 +25,10 @@ function off_wiki_feature_views_api($module = NULL, $api = NULL) {
  */
 function off_wiki_feature_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Wiki".
+  // Exported flag: "Wikis".
   $flags['subscribe_wiki'] = array(
     'entity_type' => 'node',
-    'title' => 'Wiki',
+    'title' => 'Wikis',
     'global' => 0,
     'types' => array(
       0 => 'book',
