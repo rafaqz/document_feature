@@ -113,6 +113,24 @@ function off_wiki_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'flag subscribe_wiki'.
+  $permissions['flag subscribe_wiki'] = array(
+    'name' => 'flag subscribe_wiki',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'unflag subscribe_wiki'.
+  $permissions['unflag subscribe_wiki'] = array(
+    'name' => 'unflag subscribe_wiki',
+    'roles' => array(
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'use text format wiki'.
   $permissions['use text format wiki'] = array(
     'name' => 'use text format wiki',
