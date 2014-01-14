@@ -113,18 +113,18 @@ function off_wiki_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'flag subscribe_wiki'.
-  $permissions['flag subscribe_wiki'] = array(
-    'name' => 'flag subscribe_wiki',
+  // Exported permission: 'flag follow_wiki'.
+  $permissions['flag follow_wiki'] = array(
+    'name' => 'flag follow_wiki',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
 
-  // Exported permission: 'unflag subscribe_wiki'.
-  $permissions['unflag subscribe_wiki'] = array(
-    'name' => 'unflag subscribe_wiki',
+  // Exported permission: 'unflag follow_wiki'.
+  $permissions['unflag follow_wiki'] = array(
+    'name' => 'unflag follow_wiki',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),

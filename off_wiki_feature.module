@@ -24,7 +24,7 @@ function off_wiki_feature_node_view_alter(&$build) {
   }
   // Only show wiki subscription if this is a book parent.
   if (empty($build['#node']->book) || ($build['#node']->book['bid'] != $build['#node']->nid)) {
-    unset($build['links']['flag']['#links']['flag-subscribe_wiki']);
+    unset($build['links']['flag']['#links']['flag-follow_wiki']);
   }
 }
 
@@ -108,7 +108,7 @@ function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $s
     }
     
     // Get the idea of the wiki subsribe flag.
-    $flag_name = 'subscribe_wiki';
+    $flag_name = 'follow_wiki';
     $flag = flag_load($flag_name);
     $fid = $flag->fid;
 

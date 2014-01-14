@@ -11,7 +11,7 @@ function off_wiki_feature_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'subscribe_wiki';
+  $view->name = 'follow_wiki';
   $view->description = '';
   $view->tag = 'wiki feature';
   $view->base_table = 'node';
@@ -56,11 +56,11 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'You are not subscribed to any item.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Relationship: Flags: subscribe_wiki */
+  /* Relationship: Flags: follow_wiki */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'subscribe_wiki';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'follow_wiki';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -98,7 +98,7 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $export['subscribe_wiki'] = $view;
+  $export['follow_wiki'] = $view;
 
   $view = new view();
   $view->name = 'wiki_list';

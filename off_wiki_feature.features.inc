@@ -26,7 +26,7 @@ function off_wiki_feature_views_api($module = NULL, $api = NULL) {
 function off_wiki_feature_flag_default_flags() {
   $flags = array();
   // Exported flag: "Wikis".
-  $flags['subscribe_wiki'] = array(
+  $flags['follow_wiki'] = array(
     'entity_type' => 'node',
     'title' => 'Wikis',
     'global' => 0,
