@@ -15,7 +15,7 @@ function off_wiki_feature_views_default_views() {
   $view->description = '';
   $view->tag = 'wiki feature';
   $view->base_table = 'node';
-  $view->human_name = 'Subscribe wiki';
+  $view->human_name = 'Follow wiki';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
