@@ -16,7 +16,7 @@ function off_wiki_feature_filter_default_formats() {
     'name' => 'Wiki',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -6,
     'filters' => array(
       'filter_html' => array(
         'weight' => -10,
