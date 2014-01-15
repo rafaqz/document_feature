@@ -43,7 +43,7 @@ function off_wiki_feature_collabco_integration() {
               'entity_type' => 'none',
             ),
             'add_content_link' => array(
-              'bundle' => 'book',
+              'bundles' => array('book'),
               'areas' => array('header'),
             ),
           ),
