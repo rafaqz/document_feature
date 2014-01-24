@@ -15,6 +15,8 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'access printer-friendly version',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'book',
   );
@@ -24,6 +26,8 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'add content to books',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'book',
   );
@@ -33,6 +37,9 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'administer book outlines',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'book',
   );
@@ -63,6 +70,8 @@ function off_wiki_feature_user_default_permissions() {
     'name' => 'create new books',
     'roles' => array(
       'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'book',
   );
