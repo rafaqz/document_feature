@@ -24,10 +24,10 @@ node/*/track
 node/*/edit',
     'roles' => array(),
     'themes' => array(
-      'custom_theme' => array(
-        'region' => 'content_top',
-        'status' => 1,
-        'theme' => 'custom_theme',
+      'custom_zurb' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'custom_zurb',
         'weight' => 0,
       ),
       'seven' => array(
@@ -51,10 +51,10 @@ node/*/edit',
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'custom_theme' => array(
+      'custom_zurb' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'custom_theme',
+        'theme' => 'custom_zurb',
         'weight' => 0,
       ),
       'seven' => array(
