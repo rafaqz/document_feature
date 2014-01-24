@@ -25,10 +25,10 @@ node/*/edit',
     'roles' => array(),
     'themes' => array(
       'custom_zurb' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'custom_zurb',
-        'weight' => 0,
+        'weight' => -2,
       ),
       'seven' => array(
         'region' => '',
