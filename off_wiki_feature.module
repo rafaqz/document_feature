@@ -29,31 +29,6 @@ function off_wiki_feature_node_view_alter(&$build) {
 }
 
 /**
- * Implements hook_collabco_integration().
- */
-function off_wiki_feature_collabco_integration() {
-  // Add links to views if a module wants to do that.
-  return array(
-    'off_wiki_feature' => array(
-      'views' => array(
-        'wikis' => array(
-          'group_page' => array(
-            'subscribe_flag' => array(
-              'group_type' => 'node',
-              'entity_type' => 'none',
-            ),
-            'add_content_link' => array(
-              'bundles' => array('book'),
-              'areas' => array('header'),
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-/**
  * Implements hook_message_subscribe_get_subscribers().
  * Handles subscriptions to books.
  *
@@ -156,3 +131,33 @@ function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $s
   return $uids;
 }
 
+/**
+ * Implements hook_collabco_integration().
+ */
+function off_wiki_feature_collabco_integration() {
+  // Add links to views if a module wants to do that.
+  return array(
+    'off_wiki_feature' => array(
+      'entity' => array(
+        'node'=> array('book'),
+      ),
+      'tab' => array(
+        'label' => 'Wikis', 
+        'subpath' => 'wiki',
+      ),
+      'views' => array(
+        'wikis' => array(
+          'group_page' => array(
+            'subscribe_flag' => array(
+              'group_type' => 'node',
+              'entity_type' => 'none',
+            ),
+            'add_content_link' => array(
+              'areas' => array('header'),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
