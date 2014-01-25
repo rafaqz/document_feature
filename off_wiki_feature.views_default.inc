@@ -246,11 +246,16 @@ function off_wiki_feature_views_default_views() {
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
   $handler->display->display_options['path'] = 'node/%/wiki';
-  $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Wikis';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: User Page */
+  $handler = $view->new_display('page', 'User Page', 'user_page');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'user/%/wiki';
   $export['wikis'] = $view;
 
   return $export;
