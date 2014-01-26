@@ -33,7 +33,7 @@ function off_wiki_feature_flag_default_flags() {
     'types' => array(
       0 => 'book',
     ),
-    'flag_short' => 'Follow [node:book:title] Wiki',
+    'flag_short' => 'Follow Whole Wiki',
     'flag_long' => '',
     'flag_message' => '',
     'unflag_short' => 'Unfolow [node:book:title] Wiki',
