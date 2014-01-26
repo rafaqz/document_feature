@@ -142,8 +142,7 @@ function off_wiki_feature_collabco_integration() {
         'node'=> array('book'),
       ),
       'tab' => array(
-        'label' => 'Wikis', 
-        'subpath' => 'wiki',
+        'Wikis' => 'book',
       ),
       'views' => array(
         'wikis' => array(
