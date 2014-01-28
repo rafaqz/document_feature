@@ -19,16 +19,14 @@ function off_wiki_feature_default_fe_block_settings() {
     'delta' => 'book_explorer',
     'module' => 'book_explorer',
     'node_types' => array(),
-    'pages' => 'node/*/talk
-node/*/track
-node/*/edit',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'custom_zurb' => array(
-        'region' => 'content',
+        'region' => 'sidebar_second',
         'status' => 1,
         'theme' => 'custom_zurb',
-        'weight' => -2,
+        'weight' => -15,
       ),
       'seven' => array(
         'region' => '',
