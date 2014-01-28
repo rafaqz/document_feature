@@ -69,7 +69,10 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'book_helper_navigation_options';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'prev',
+    1 => 'next',
+  );
   $export['book_helper_navigation_options'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -83,7 +86,7 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'book_helper_remove_book_navigation';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['book_helper_remove_book_navigation'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -139,7 +142,7 @@ function off_wiki_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_book';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_subject_field_book'] = $strongarm;
 
   $strongarm = new stdClass();
