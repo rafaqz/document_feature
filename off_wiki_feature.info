@@ -13,6 +13,7 @@ dependencies[] = filter
 dependencies[] = flag
 dependencies[] = freelinking
 dependencies[] = freelinking_prepopulate
+dependencies[] = media
 dependencies[] = node
 dependencies[] = off_categories_feature
 dependencies[] = og
