@@ -55,6 +55,7 @@ function off_wiki_feature_strongarm() {
   $strongarm->name = 'book_helper_links';
   $strongarm->value = array(
     0 => 'book_add_child',
+    1 => 'book_printer',
   );
   $export['book_helper_links'] = $strongarm;
 
@@ -185,7 +186,18 @@ function off_wiki_feature_strongarm() {
           'weight' => '30',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'social_share' => array(
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__book'] = $strongarm;
