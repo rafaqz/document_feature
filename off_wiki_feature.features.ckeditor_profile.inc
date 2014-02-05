@@ -51,7 +51,7 @@ function off_wiki_feature_ckeditor_profile_defaults() {
         ),
         'css_mode' => 'theme',
         'css_path' => '',
-        'css_style' => 'theme',
+        'css_style' => 'default',
         'styles_path' => '',
         'filebrowser' => 'none',
         'filebrowser_image' => '',
@@ -62,7 +62,7 @@ function off_wiki_feature_ckeditor_profile_defaults() {
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.allowedContent = true;',
         'loadPlugins' => array(
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
