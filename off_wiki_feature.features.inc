@@ -36,7 +36,7 @@ function off_wiki_feature_flag_default_flags() {
     'flag_short' => 'Follow Whole Wiki',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Unfolow Whole Wiki',
+    'unflag_short' => 'Unfollow Whole Wiki',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
