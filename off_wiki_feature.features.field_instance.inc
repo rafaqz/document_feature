@@ -321,7 +321,7 @@ function off_wiki_feature_field_default_field_instances() {
   t('Category');
   t('Comment');
   t('Groups audience');
-  t('tags');
+  t('Tags');
 
   return $field_instances;
 }
