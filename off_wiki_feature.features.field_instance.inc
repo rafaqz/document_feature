@@ -284,22 +284,22 @@ function off_wiki_feature_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
         'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'Tags',
-    'label' => 'tags',
+    'field_name' => 'tags',
+    'label' => 'Tags',
     'required' => FALSE,
     'settings' => array(
       'user_register_form' => FALSE,
