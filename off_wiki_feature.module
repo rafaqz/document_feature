@@ -139,12 +139,15 @@ function off_wiki_feature_collabco_integration() {
   return array(
     'off_wiki_feature' => array(
       'entity' => array(
-        'node'=> array('book'),
-      ),
-      'tab' => array(
-        'Wikis' => array(
-          'subpath' => 'wiki',
-          'node' => 'book',
+        'node'=> array(
+          'book' => array(
+            'add_content_link' => TRUE,
+            'tab' => array(
+              'Wikis' => array(
+                'subpath' => 'wiki',
+              ),
+            ),
+          ),
         ),
       ),
       'views' => array(
