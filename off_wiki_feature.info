@@ -33,7 +33,6 @@ features[field_instance][] = comment-comment_node_book-comment_body
 features[field_instance][] = node-book-body
 features[field_instance][] = node-book-field_category
 features[field_instance][] = node-book-og_group_ref
-features[field_instance][] = node-book-tags
 features[filter][] = wiki
 features[flag][] = follow_wiki
 features[node][] = book
