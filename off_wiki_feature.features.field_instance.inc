@@ -228,7 +228,6 @@ function off_wiki_feature_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Category');
   t('Comment');
   t('Groups audience');
 
