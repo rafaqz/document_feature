@@ -44,7 +44,7 @@ function off_wiki_feature_flag_default_flags() {
     'weight' => 0,
     'show_in_links' => array(
       'full' => 'full',
-      'teaser' => 'teaser',
+      'teaser' => 0,
       'rss' => 0,
       'search_index' => 0,
       'search_result' => 0,
