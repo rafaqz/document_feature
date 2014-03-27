@@ -17,6 +17,8 @@ function off_wiki_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'book',
   );
@@ -28,6 +30,7 @@ function off_wiki_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'book',
   );
@@ -71,6 +74,7 @@ function off_wiki_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'book',
   );
