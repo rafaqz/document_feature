@@ -310,6 +310,12 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_related_node_group']['table'] = 'og_membership';
   $handler->display->display_options['relationships']['og_membership_related_node_group']['field'] = 'og_membership_related_node_group';
   $handler->display->display_options['relationships']['og_membership_related_node_group']['relationship'] = 'og_membership_rel';
+  /* Relationship: Flags: follow_node */
+  $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'follow_node';
+  $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Rendered Node */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
@@ -332,6 +338,17 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['text'] = 'In [title]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Flags: User uid */
+  $handler->display->display_options['arguments']['uid']['id'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['table'] = 'flagging';
+  $handler->display->display_options['arguments']['uid']['field'] = 'uid';
+  $handler->display->display_options['arguments']['uid']['relationship'] = 'flag_content_rel';
+  $handler->display->display_options['arguments']['uid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['uid']['default_argument_type'] = 'user';
+  $handler->display->display_options['arguments']['uid']['default_argument_options']['user'] = FALSE;
+  $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['path'] = 'user/%/wiki';
   $export['wikis'] = $view;
 
