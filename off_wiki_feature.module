@@ -145,6 +145,7 @@ function off_wiki_feature_collabco_integration() {
             'tab' => array(
               'Wikis' => array(
                 'subpath' => 'wiki',
+                'weight' => '10',
               ),
             ),
           ),
