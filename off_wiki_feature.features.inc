@@ -28,17 +28,17 @@ function off_wiki_feature_flag_default_flags() {
   // Exported flag: "Wikis".
   $flags['follow_wiki'] = array(
     'entity_type' => 'node',
-    'title' => 'Wikis',
+    'title' => 'Documents',
     'global' => 0,
     'types' => array(
       0 => 'book',
     ),
-    'flag_short' => 'Follow Whole Wiki',
-    'flag_long' => 'Receive notifications for all activity in this whole wiki.',
-    'flag_message' => 'You are now following this whole wiki.',
-    'unflag_short' => 'Unfollow Whole Wiki',
+    'flag_short' => 'Follow Whole Documents',
+    'flag_long' => 'Receive notifications for all activity in this whole document.',
+    'flag_message' => 'You are now following this whole document.',
+    'unflag_short' => 'Unfollow Whole Documents',
     'unflag_long' => 'Cancel notifications.',
-    'unflag_message' => 'You are no longer following this wiki (this will not cancel pages followed individually).',
+    'unflag_message' => 'You are no longer following this document (this will not cancel pages followed individually).',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
     'weight' => 0,
@@ -73,9 +73,9 @@ function off_wiki_feature_flag_default_flags() {
 function off_wiki_feature_node_info() {
   $items = array(
     'book' => array(
-      'name' => t('Wiki'),
+      'name' => t('Document Page'),
       'base' => 'node_content',
-      'description' => t('<em>Wikis (Books)</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'),
+      'description' => t('<em>Documents</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

@@ -10,10 +10,10 @@
 function off_wiki_feature_filter_default_formats() {
   $formats = array();
 
-  // Exported format: Wiki.
+  // Exported format: Document.
   $formats['wiki'] = array(
     'format' => 'wiki',
-    'name' => 'Wiki',
+    'name' => 'Document',
     'cache' => 1,
     'status' => 1,
     'weight' => -6,
