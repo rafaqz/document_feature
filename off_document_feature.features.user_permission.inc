@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.user_permission.inc
+ * off_document_feature.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function off_wiki_feature_user_default_permissions() {
+function off_document_feature_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'access printer-friendly version'.
@@ -123,27 +123,27 @@ function off_wiki_feature_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'flag follow_wiki'.
-  $permissions['flag follow_wiki'] = array(
-    'name' => 'flag follow_wiki',
+  // Exported permission: 'flag follow_document'.
+  $permissions['flag follow_document'] = array(
+    'name' => 'flag follow_document',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
 
-  // Exported permission: 'unflag follow_wiki'.
-  $permissions['unflag follow_wiki'] = array(
-    'name' => 'unflag follow_wiki',
+  // Exported permission: 'unflag follow_document'.
+  $permissions['unflag follow_document'] = array(
+    'name' => 'unflag follow_document',
     'roles' => array(
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
 
-  // Exported permission: 'use text format wiki'.
-  $permissions['use text format wiki'] = array(
-    'name' => 'use text format wiki',
+  // Exported permission: 'use text format document'.
+  $permissions['use text format document'] = array(
+    'name' => 'use text format document',
     'roles' => array(
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',

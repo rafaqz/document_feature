@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.filter.inc
+ * off_document_feature.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function off_wiki_feature_filter_default_formats() {
+function off_document_feature_filter_default_formats() {
   $formats = array();
 
   // Exported format: Document.
-  $formats['wiki'] = array(
-    'format' => 'wiki',
+  $formats['document'] = array(
+    'format' => 'document',
     'name' => 'Document',
     'cache' => 1,
     'status' => 1,

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.strongarm.inc
+ * off_document_feature.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function off_wiki_feature_strongarm() {
+function off_document_feature_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
@@ -305,9 +305,9 @@ function off_wiki_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'freelinking_wikipedia_languagecode';
+  $strongarm->name = 'freelinking_documentpedia_languagecode';
   $strongarm->value = 'en';
-  $export['freelinking_wikipedia_languagecode'] = $strongarm;
+  $export['freelinking_documentpedia_languagecode'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -328,9 +328,9 @@ function off_wiki_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'message_follow_wiki';
-  $strongarm->value = 'follow_wiki:default';
-  $export['message_follow_wiki'] = $strongarm;
+  $strongarm->name = 'message_follow_document';
+  $strongarm->value = 'follow_document:default';
+  $export['message_follow_document'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

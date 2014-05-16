@@ -4,7 +4,7 @@
  * Code for the Collabco Wiki Feature feature.
  */
 
-include_once 'off_wiki_feature.features.inc';
+include_once 'off_document_feature.features.inc';
 
 /**
  * Implements hook_node_view().
@@ -12,7 +12,7 @@ include_once 'off_wiki_feature.features.inc';
  * Add og_group_ref prepopulate query to 'Add child page' link, so it uses the 
  * parents group by default.
  */
-function off_wiki_feature_node_view_alter(&$build) {
+function off_document_feature_node_view_alter(&$build) {
   // If this node is connected to a group.
   if (!empty($build['#node']->og_group_ref['und'][0]['target_id'])) {
     // And this is a normal book page.
@@ -22,9 +22,9 @@ function off_wiki_feature_node_view_alter(&$build) {
       $build['links']['book']['#links']['book_add_child']['query']['og_group_ref'] = $gid;
     }
   }
-  // Only show wiki subscription if this is a book parent.
+  // Only show document subscription if this is a book parent.
   if (empty($build['#node']->book) || ($build['#node']->book['bid'] != $build['#node']->nid)) {
-    unset($build['links']['flag']['#links']['flag-follow_wiki']);
+    unset($build['links']['flag']['#links']['flag-follow_document']);
   }
 }
 
@@ -48,7 +48,7 @@ function off_wiki_feature_node_view_alter(&$build) {
  * @see flag_get_content_flags()
  */
 
-function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $subscribe_options = array(), $context = array()) {
+function off_document_feature_message_subscribe_get_subscribers(Message $message, $subscribe_options = array(), $context = array()) {
   $uids = array();
   $subscribe_options += array(
     'last uid' => 0,
@@ -82,8 +82,8 @@ function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $s
       continue;
     }
     
-    // Get the idea of the wiki subsribe flag.
-    $flag_name = 'follow_wiki';
+    // Get the idea of the document subsribe flag.
+    $flag_name = 'follow_document';
     $flag = flag_load($flag_name);
     $fid = $flag->fid;
 
@@ -134,17 +134,17 @@ function off_wiki_feature_message_subscribe_get_subscribers(Message $message, $s
 /**
  * Implements hook_collabco_integration().
  */
-function off_wiki_feature_collabco_integration() {
+function off_document_feature_collabco_integration() {
   // Add links to views if a module wants to do that.
   return array(
-    'off_wiki_feature' => array(
+    'off_document_feature' => array(
       'entity' => array(
         'node'=> array(
           'book' => array(
             'add_content_link' => TRUE,
             'tab' => array(
               'Documentation' => array(
-                'subpath' => 'wiki',
+                'subpath' => 'document',
                 'weight' => '10',
               ),
             ),
@@ -152,7 +152,7 @@ function off_wiki_feature_collabco_integration() {
         ),
       ),
       'views' => array(
-        'wikis' => array(
+        'documents' => array(
           'group_page' => array(
             'subscribe_flag' => array(
               'group_type' => 'node',

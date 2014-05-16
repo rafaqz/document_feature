@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.ckeditor_profile.inc
+ * off_document_feature.features.ckeditor_profile.inc
  */
 
 /**
  * Implements hook_ckeditor_profile_defaults().
  */
-function off_wiki_feature_ckeditor_profile_defaults() {
+function off_document_feature_ckeditor_profile_defaults() {
   $data = array(
     'Wiki' => array(
       'name' => 'Wiki',
@@ -103,7 +103,7 @@ function off_wiki_feature_ckeditor_profile_defaults() {
         ),
       ),
       'input_formats' => array(
-        'wiki' => 'Wiki',
+        'document' => 'Wiki',
       ),
     ),
   );

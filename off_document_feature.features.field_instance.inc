@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.field_instance.inc
+ * off_document_feature.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function off_wiki_feature_field_default_field_instances() {
+function off_document_feature_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'comment-comment_node_book-comment_body'
@@ -36,7 +36,7 @@ function off_wiki_feature_field_default_field_instances() {
           'full_html' => 'full_html',
           'php_code' => 'php_code',
           'plain_text' => 'plain_text',
-          'wiki' => 'wiki',
+          'document' => 'document',
         ),
         'allowed_formats_toggle' => 0,
         'default_order_toggle' => 0,
@@ -54,7 +54,7 @@ function off_wiki_feature_field_default_field_instances() {
             'plain_text' => array(
               'weight' => 10,
             ),
-            'wiki' => array(
+            'document' => array(
               'weight' => 0,
             ),
           ),
@@ -109,7 +109,7 @@ function off_wiki_feature_field_default_field_instances() {
           'full_html' => 0,
           'php_code' => 0,
           'plain_text' => 0,
-          'wiki' => 'wiki',
+          'document' => 'document',
         ),
         'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
@@ -127,7 +127,7 @@ function off_wiki_feature_field_default_field_instances() {
             'plain_text' => array(
               'weight' => 10,
             ),
-            'wiki' => array(
+            'document' => array(
               'weight' => 0,
             ),
           ),

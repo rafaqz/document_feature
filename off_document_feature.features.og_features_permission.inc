@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.og_features_permission.inc
+ * off_document_feature.features.og_features_permission.inc
  */
 
 /**
  * Implements hook_og_features_default_permissions().
  */
-function off_wiki_feature_og_features_default_permissions() {
+function off_document_feature_og_features_default_permissions() {
   $permissions = array();
 
   // Exported og permission: 'node:closed_group:create book content'

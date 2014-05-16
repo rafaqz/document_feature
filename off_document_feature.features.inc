@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_wiki_feature.features.inc
+ * off_document_feature.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function off_wiki_feature_ctools_plugin_api($module = NULL, $api = NULL) {
+function off_document_feature_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -16,17 +16,17 @@ function off_wiki_feature_ctools_plugin_api($module = NULL, $api = NULL) {
 /**
  * Implements hook_views_api().
  */
-function off_wiki_feature_views_api($module = NULL, $api = NULL) {
+function off_document_feature_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_flag_default_flags().
  */
-function off_wiki_feature_flag_default_flags() {
+function off_document_feature_flag_default_flags() {
   $flags = array();
   // Exported flag: "Wikis".
-  $flags['follow_wiki'] = array(
+  $flags['follow_document'] = array(
     'entity_type' => 'node',
     'title' => 'Documents',
     'global' => 0,
@@ -57,7 +57,7 @@ function off_wiki_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'module' => 'off_wiki_feature',
+    'module' => 'off_document_feature',
     'locked' => array(
       0 => 'name',
     ),
@@ -70,7 +70,7 @@ function off_wiki_feature_flag_default_flags() {
 /**
  * Implements hook_node_info().
  */
-function off_wiki_feature_node_info() {
+function off_document_feature_node_info() {
   $items = array(
     'book' => array(
       'name' => t('Document Page'),

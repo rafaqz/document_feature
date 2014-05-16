@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * off_wiki_feature.views_default.inc
+ * off_document_feature.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function off_wiki_feature_views_default_views() {
+function off_document_feature_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'follow_wiki';
+  $view->name = 'follow_document';
   $view->description = '';
   $view->tag = 'Document Feature';
   $view->base_table = 'node';
@@ -38,11 +38,11 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Not following any Wikis.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Relationship: Flags: follow_wiki */
+  /* Relationship: Flags: follow_document */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
-  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'follow_wiki';
+  $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'follow_document';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
   /* Field: Content: Rendered Node */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
@@ -77,10 +77,10 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $export['follow_wiki'] = $view;
+  $export['follow_document'] = $view;
 
   $view = new view();
-  $view->name = 'wiki_list';
+  $view->name = 'document_list';
   $view->description = '';
   $view->tag = 'Wiki Feature';
   $view->base_table = 'node';
@@ -174,10 +174,10 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  $export['wiki_list'] = $view;
+  $export['document_list'] = $view;
 
   $view = new view();
-  $view->name = 'wikis';
+  $view->name = 'documents';
   $view->description = '';
   $view->tag = 'Wiki Feature';
   $view->base_table = 'node';
@@ -289,7 +289,7 @@ function off_wiki_feature_views_default_views() {
 
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
-  $handler->display->display_options['path'] = 'node/%/wiki';
+  $handler->display->display_options['path'] = 'node/%/document';
   $handler->display->display_options['menu']['title'] = 'Wikis';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
@@ -349,8 +349,8 @@ function off_wiki_feature_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['path'] = 'user/%/wiki';
-  $export['wikis'] = $view;
+  $handler->display->display_options['path'] = 'user/%/document';
+  $export['documents'] = $view;
 
   return $export;
 }
