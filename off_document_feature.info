@@ -1,5 +1,5 @@
-name = OFF Wiki Feature
-description = Wiki like functionality using the book module.
+name = OFF Document Feature
+description = Document like functionality using the book module.
 core = 7.x
 package = Collabco
 dependencies[] = book
@@ -22,7 +22,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content_cache
-features[ckeditor_profile][] = Wiki
+features[ckeditor_profile][] = Document
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[fe_block_settings][] = book_explorer-book_explorer

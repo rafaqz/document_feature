@@ -9,8 +9,8 @@
  */
 function off_document_feature_ckeditor_profile_defaults() {
   $data = array(
-    'Wiki' => array(
-      'name' => 'Wiki',
+    'Document' => array(
+      'name' => 'Document',
       'settings' => array(
         'ss' => 2,
         'default' => 't',
@@ -103,7 +103,7 @@ function off_document_feature_ckeditor_profile_defaults() {
         ),
       ),
       'input_formats' => array(
-        'document' => 'Wiki',
+        'document' => 'Document',
       ),
     ),
   );

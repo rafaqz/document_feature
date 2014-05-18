@@ -25,7 +25,7 @@ function off_document_feature_views_api($module = NULL, $api = NULL) {
  */
 function off_document_feature_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Wikis".
+  // Exported flag: "Documents".
   $flags['follow_document'] = array(
     'entity_type' => 'node',
     'title' => 'Documents',

@@ -36,7 +36,7 @@ function off_document_feature_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Not following any Wikis.';
+  $handler->display->display_options['empty']['area']['content'] = 'Not following any Documents.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Relationship: Flags: follow_document */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
@@ -82,16 +82,16 @@ function off_document_feature_views_default_views() {
   $view = new view();
   $view->name = 'document_list';
   $view->description = '';
-  $view->tag = 'Wiki Feature';
+  $view->tag = 'Document Feature';
   $view->base_table = 'node';
-  $view->human_name = 'Wiki List';
+  $view->human_name = 'Document List';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Wikis';
+  $handler->display->display_options['title'] = 'Documents';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -106,7 +106,7 @@ function off_document_feature_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'No Wiki pages added.';
+  $handler->display->display_options['empty']['area']['content'] = 'No Document pages added.';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Relationship: OG membership: OG membership from Node */
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
@@ -179,9 +179,9 @@ function off_document_feature_views_default_views() {
   $view = new view();
   $view->name = 'documents';
   $view->description = '';
-  $view->tag = 'Wiki Feature';
+  $view->tag = 'Document Feature';
   $view->base_table = 'node';
-  $view->human_name = 'Wikis';
+  $view->human_name = 'Documents';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -290,7 +290,7 @@ function off_document_feature_views_default_views() {
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
   $handler->display->display_options['path'] = 'node/%/document';
-  $handler->display->display_options['menu']['title'] = 'Wikis';
+  $handler->display->display_options['menu']['title'] = 'Documents';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
