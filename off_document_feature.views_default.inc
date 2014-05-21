@@ -203,7 +203,7 @@ function off_document_feature_views_default_views() {
       'book' => 'book',
       'basic_page' => 0,
       'blog' => 0,
-      'closed_group' => 0,
+      'private_group' => 0,
       'conversation' => 0,
       'knowledge_object' => 0,
       'group' => 0,
