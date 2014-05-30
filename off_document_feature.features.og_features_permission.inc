@@ -10,45 +10,6 @@
 function off_document_feature_og_features_default_permissions() {
   $permissions = array();
 
-  // Exported og permission: 'node:private_group:create book content'
-  $permissions['node:private_group:create book content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
-  // Exported og permission: 'node:private_group:delete any book content'
-  $permissions['node:private_group:delete any book content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-    ),
-  );
-
-  // Exported og permission: 'node:private_group:delete own book content'
-  $permissions['node:private_group:delete own book content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
-  // Exported og permission: 'node:private_group:update any book content'
-  $permissions['node:private_group:update any book content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
-  // Exported og permission: 'node:private_group:update own book content'
-  $permissions['node:private_group:update own book content'] = array(
-    'roles' => array(
-      'administrator member' => 'administrator member',
-      'member' => 'member',
-    ),
-  );
-
   // Exported og permission: 'node:group:create book content'
   $permissions['node:group:create book content'] = array(
     'roles' => array(
@@ -82,6 +43,45 @@ function off_document_feature_og_features_default_permissions() {
 
   // Exported og permission: 'node:group:update own book content'
   $permissions['node:group:update own book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:private_group:create book content'
+  $permissions['node:private_group:create book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:private_group:delete any book content'
+  $permissions['node:private_group:delete any book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:private_group:delete own book content'
+  $permissions['node:private_group:delete own book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:private_group:update any book content'
+  $permissions['node:private_group:update any book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:private_group:update own book content'
+  $permissions['node:private_group:update own book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'member' => 'member',

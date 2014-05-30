@@ -305,9 +305,9 @@ function off_document_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'freelinking_documentpedia_languagecode';
+  $strongarm->name = 'freelinking_wikipedia_languagecode';
   $strongarm->value = 'en';
-  $export['freelinking_documentpedia_languagecode'] = $strongarm;
+  $export['freelinking_wikipedia_languagecode'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
