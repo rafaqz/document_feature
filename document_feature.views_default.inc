@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_document_feature.views_default.inc
+ * document_feature.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function off_document_feature_views_default_views() {
+function document_feature_views_default_views() {
   $export = array();
 
   $view = new view();

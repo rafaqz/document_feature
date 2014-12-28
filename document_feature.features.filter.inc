@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_document_feature.features.filter.inc
+ * document_feature.features.filter.inc
  */
 
 /**
  * Implements hook_filter_default_formats().
  */
-function off_document_feature_filter_default_formats() {
+function document_feature_filter_default_formats() {
   $formats = array();
 
   // Exported format: Document.

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * off_document_feature.features.field_instance.inc
+ * document_feature.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function off_document_feature_field_default_field_instances() {
+function document_feature_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'comment-comment_node_book-comment_body'
