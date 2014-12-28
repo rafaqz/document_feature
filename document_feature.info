@@ -1,7 +1,7 @@
-name = OFF Document Feature
+name = Document Feature
 description = Document like functionality using the book module.
 core = 7.x
-package = Collabco
+package = Features
 dependencies[] = book
 dependencies[] = book_explorer
 dependencies[] = book_helper

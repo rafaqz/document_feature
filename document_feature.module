@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Collabco Document Feature feature.
+ * Code for the Document Feature.
  */
 
 include_once 'document_feature.features.inc';
