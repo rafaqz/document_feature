@@ -9,7 +9,7 @@ projects[book_helper][subdir] = "contrib"
 projects[book_explorer][version] = "1.1"
 projects[book_explorer][subdir] = "contrib"
 
-projects[freelinking][version] = "3.2"
+projects[freelinking][version] = "3.5"
 projects[freelinking][subdir] = "contrib"
 
 projects[prepopulate][version] = "2.x-dev"
