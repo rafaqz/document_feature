@@ -110,4 +110,3 @@ features[views_view][] = follow_document
 features_exclude[dependencies][settings_feature] = settings_feature
 features_exclude[dependencies][groups_feature] = groups_feature
 features_exclude[field_base][og_group_ref] = og_group_ref
-project path = sites/all/modules/features
